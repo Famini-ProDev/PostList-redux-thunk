@@ -338,7 +338,7 @@ methods as arguments to `connect`. This connects our component to Redux.
 Finally, we will call this action creator in the `componentDidMount` lifecycle method:
 
 ```
-    this.props.fetchData('http://api.tvmaze.com/shows');
+      this.props.fetchData('https://jsonplaceholder.typicode.com/posts');
 ```
 
 Side note: if you are wondering why are we calling the action creator in `componentDidMount` instead of other 
@@ -381,7 +381,7 @@ In the end, our component will look like this:
 
     class ItemList extends Component {
         componentDidMount() {
-            this.props.fetchData('http://api.tvmaze.com/shows');
+            this.props.fetchData('https://jsonplaceholder.typicode.com/posts');
         }
 
         render() {
@@ -398,9 +398,8 @@ In the end, our component will look like this:
                     {this.props.items.map((item) => (
                         <div key={item.id}>
                                 <ListGroup style={setDistanceBetweenItems}>
-                                    <ListGroupItem href={item.officialSite} header={item.name}>
-                                        Rating: {item.rating.average}
-                                        <span className="pull-xs-right">Premiered: {item.premiered}</span>
+                                    <ListGroupItem  header={item.title}>
+                                        <span className="pull-xs-right">Body: {item.body}</span>
                                     </ListGroupItem>
                                 </ListGroup>
                         </div>
@@ -437,15 +436,11 @@ In the end, our component will look like this:
 And that was all !
 
 
-
 Our app will look like this:
 
 
 ![](/images/intro-redux/app.PNG)
 
-
-
-I wasn't lying about my design skills, was I ? :)
 
 
 ### Last words and other resources
