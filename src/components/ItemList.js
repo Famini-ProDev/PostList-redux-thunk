@@ -22,7 +22,7 @@ class ItemList extends Component {
                 {this.props.items.map((item) => (
                     <div key={item.id}>
                         <ListGroup style={setDistanceBetweenItems}>
-                            <ListGroupItem style={borderNone} href={item.title} header={item.title}>
+                            <ListGroupItem style={borderNone} header={item.title}>
                                 <span className="pull-xs-right">Body: {item.body}</span>
                             </ListGroupItem>
                         </ListGroup>
