@@ -436,34 +436,3 @@ In the end, our component will look like this:
 And that was all !
 
 
-Our app will look like this:
-
-
-![](/images/intro-redux/app.PNG)
-
-
-
-### Last words and other resources
-
-We now have an app that is fetching data asynchronously from an API, using React for our UI and Redux for managing
-the state of our application. I think this is a good starting point for a personal / small project and also you get 
-to work with new technologies.
-
-This doesn't mean that Redux is the solution for every problem we face when writing apps in React or that Redux is a 
-a must-use in any Javascript written project, as Dan Abramov states in an interesting [article.](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367)
-
-Also worth noting, Facebook are preparing [React Fiber](https://github.com/acdlite/react-fiber-architecture), a 
-reimplementation of React. They state that its goal is to make it more suitable for animations and gestures and 
-that the key new feature will be incremental rendering which is:
-> the ability to split rendering work into chunks and spread it out over multiple frames
-
-Other interesting technologies (which I'm currently looking into) would be [Relay](https://facebook.github.io/relay/)
-and [GraphQL](http://graphql.org/). Maybe I'll also write something about those. Stay tuned :)
-
-### Resources
-
-- [Github repo](https://github.com/bradeac/using-redux-with-react)
-- [Redux docs](http://redux.js.org/)
-- [Redux video tutorial by Dan Abramov](https://egghead.io/courses/getting-started-with-redux)
-- [Redux Thunk](https://github.com/gaearon/redux-thunk)
-- [Great article with a nice real-life analogy of why Redux is important and helpful](http://almerosteyn.com/2016/08/redux-explained-again)
