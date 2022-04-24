@@ -125,17 +125,10 @@ the corresponding type.
 
 The last one will be called after the fetching was successful and will receive the fetched items as an parameter. This
 action creator will return an object with a property called `items` that will receive as value the array of items which
-were passed as an argument. Instead if `items: items`, we can just write `items`, using an ES6 syntactic sugar called 
-[property shorthand](http://es6-features.org/#PropertyShorthand).
+were passed as an argument.
 
-
-To visualize a bit what was described earlier, this is how it looks in [Redux DevTools](https://github.com/zalmoxisus/redux-devtools-extension):
 
 ![](/images/intro-redux/redux_devtools_action_creators.PNG)
-
-
-
-Out of the box, action creators can return just actions. That's where [Redux Thunk](https://github.com/gaearon/redux-thunk) comes in handy. Thunk allows us to have action creators that return a function instead of an action and dispatch an action only in certain cases. 
 
 
 If it wasn't for Redux Thunk, we would probably end up having just one action creator, something like this:
@@ -340,12 +333,6 @@ Finally, we will call this action creator in the `componentDidMount` lifecycle m
 ```
       this.props.fetchData('https://jsonplaceholder.typicode.com/posts');
 ```
-
-Side note: if you are wondering why are we calling the action creator in `componentDidMount` instead of other 
-lifecycle methods, I have found a couple of good reasons [here](https://tylermcginnis.com/react-interview-questions/):
-> You can't guarantee the AJAX request won't resolve before the component mounts. If it did, that would mean that you'd be trying to setState on an unmounted component, which not only won't work, but React will yell at you for. Doing AJAX in componentDidMount will guarantee that there's a component to update.
-
-> Fiber, the next implementation of React's reconciliation algorithm, will have the ability to start and stop rendering as needed for performance benefits. One of the trade-offs of this is that componentWillMount, the other lifecycle event where it might make sense to make an AJAX request, will be "non-deterministic". What this means is that React may start calling componentWillMount at various times whenever it feels like it needs to. This would obviously be a bad formula for AJAX requests.
 
 Besides this, we need some validations:
 
