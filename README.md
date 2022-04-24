@@ -1,16 +1,5 @@
 
 
-### Introduction
-
-Redux, according to the [offical docs](http://redux.js.org), is a predictable state container for JavaScript apps written by 
-Dan Abramov. It's a lightweight implementation of Flux, which is another library for managing the state. Basically Redux 
-took the ideas that Flux brought in, leaving out its complexity by "borrowing" things from [Elm](http://elm-lang.org/).
-
-
-For starters, there are several key concepts to understand: store, actions / action creators, and reducers. The official documentation is pretty straightforward and also plenty of examples and nice analogies can be found on the internet.
-
-
-
 ### Principles
 
 Redux has three fundamental principles:
